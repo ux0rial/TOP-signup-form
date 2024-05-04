@@ -8,15 +8,86 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Sign Up!</title>
   </head>
   <body>
-    <h1>Sign-up Now!</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus
-      dicta natus! Asperiores aspernatur, aut debitis eius, exercitationem fugit
-      laboriosam laborum odit quos, ratione sint suscipit totam voluptatum.
-      Dolorem, odit?
-    </p>
+    <div class="card">
+      <h1>Let's do this!</h1>
+      <form action="" method="post">
+        <div class="input-field">
+          <label for="name">First Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="First Name"
+            required
+          />
+
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            placeholder="Last Name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+
+        <button type="submit">Create Account</button>
+        <span class="login"
+          >Already have an account? <a href="#">Log in</a></span
+        >
+        <div class="disclaimer">
+          <span class="disc-span"><em>Disclaimer</em></span>
+          <p>
+            <br />
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started. You know you want to.
+          </p>
+        </div>
+      </form>
+    </div>
+  <script src="js/app.js"></script>
   </body>
 </html>

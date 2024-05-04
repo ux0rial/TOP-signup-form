@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom properties */
+
+:root {
+  --border: 1px solid rgba(255, 255, 255, 0.5);
+  --blur: blur(20px);
+  --wbk-blur: blur(20px);
+  --bx-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  --border-radius: 16px;
+  --bg: url("img/bg.jpg");
+  --card-bg: rgba(54, 54, 54, 0.25);
+  --bg-size: cover;
+  --bg-color: rgba(0, 0, 0, 0.5);
+  --marg-top: 10px;
+}
+
+body {
+  background: var(--bg) var(--bg-color);
+  inset: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "exo 2", sans-serif;
+}
+
+.card,
+.disclaimer p,
+.input-field input {
+  background: var(--card-bg);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--wbk-blur);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+form,
+.card button,
+.footer,
+.disclaimer,
+.login {
+  margin-top: var(--marg-top);
+}
+
+h1,
+input,
+.card button {
+  color: white;
+}
+
+.card {
+  width: 768px;
+  min-height: 480px;
+  box-shadow: var(--bx-shadow);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+label {
+  display: none;
+}
+
+.card button {
+  width: 200px;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.5s;
+  position: relative;
+  top: 20px;
+  right: 213px;
+}
+
+input:focus {
+  outline-color: dodgerblue;
+}
+
+.input-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  top: 20px;
+}
+
+form {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 768px;
+  position: relative;
+  bottom: 40px;
+}
+
+.input-field input {
+  padding: 20px 25px;
+  margin: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  outline: none;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+input::placeholder {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login {
+  font-size: 13px;
+  position: relative;
+  top: 15px;
+  right: 210px;
+  color: #fff;
+}
+
+.disc-span {
+  text-align: center;
+  color: #fff;
+  width: 100px;
+  height: 35px;
+}
+
+.disclaimer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -180px;
+  transition: 0.5s;
+  width: 0;
+}
+
+.disclaimer p {
+  width: 468px;
+  padding: 5px 20px;
+  line-height: 1.3;
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  visibility: hidden;
+  color: #fff;
+}
+
+/* animations */
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+input:focus {
+  outline: none;
+}
+
+.disclaimer:hover {
+  animation: show-data 0.5s forwards;
+  transform: scale(1.3);
+  height: 365px;
+  width: 480px;
+  bottom: -12px;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: var(--border-radius);
+}
+
+.disclaimer:hover .disc-span {
+  visibility: hidden;
+}
+
+.disclaimer:hover p {
+  animation: show-data 0.5s forwards;
+  transform: scale(1.15) translateY(0);
+  height: 150px;
+  width: 368px;
+  visibility: visible;
+  transition: opacity 0.3s;
+}
+
+@keyframes show-data {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
